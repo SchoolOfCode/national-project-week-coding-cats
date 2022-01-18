@@ -1,7 +1,15 @@
 import Header from './Header';
+import Home from './Home';
+import SideBar from './Sidebar';
 
 function Dashboard() {
-  return <Header />;
+  return (
+    <div className="dashboard">
+      <Header />
+      <SideBar />
+      <Home />
+    </div>
+  );
 }
 
 export default Dashboard;
