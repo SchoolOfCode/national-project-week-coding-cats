@@ -1,8 +1,10 @@
 import './AppName.css';
+import logo from './AppName.svg';
 function AppName() {
   return (
     <div className="app-name">
-      <h1>Hackaplanner</h1>
+      <img src={logo} className="logo" />
+      <h1 className="app-name-heading">Hackaplanner</h1>
     </div>
   );
 }

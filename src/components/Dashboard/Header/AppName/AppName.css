@@ -3,4 +3,14 @@
   color: #ffffff;
   width: 250px;
   text-align: center;
+  display: flex;
+}
+
+.logo {
+  width: 20%;
+  height: auto;
+}
+
+.app-name-heading {
+  font-size: 1.75rem;
 }
