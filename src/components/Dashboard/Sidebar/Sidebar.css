@@ -4,3 +4,33 @@
   grid-row: 2;
   grid-column: 1;
 }
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-nav-btn {
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+  padding-left: 20px;
+}
+
+.sidebar-nav-btn p {
+  font-size: 1.5rem;
+}
+
+.sidebar-nav-btn--active {
+  background-color: var(--background-color);
+}
+
+.home-logo {
+  width: 20%;
+  height: auto;
+}
+
+.resources-logo {
+  width: 20%;
+  height: auto;
+}
