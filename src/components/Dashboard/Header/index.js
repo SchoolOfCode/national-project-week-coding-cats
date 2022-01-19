@@ -4,15 +4,18 @@ import AppName from './AppName';
 import Time from './Time';
 
 function Header() {
-  // State for the current time
-  const [currentTime, setCurrentTime] = useState('');
+  // State for the current hours and minutes
+  const [currentHours, setCurrentHours] = useState('');
+  const [currentMinutes, setCurrentMinutes] = useState('');
 
   // Function which gets the current time
   function getTime() {
     let today = new Date();
-    let time = today.getHours() + ':' + today.getMinutes();
-    // Updates the state with the current time
-    setCurrentTime(time);
+    let hours = today.getHours();
+    let minutes = today.getMinutes();
+    // Updates the state with the current hours and minutes
+    setCurrentHours(hours);
+    setCurrentMinutes(minutes);
   }
 
   // Runs the getTime function every second
@@ -21,7 +24,7 @@ function Header() {
   return (
     <div className="header">
       <AppName />
-      <Time time={currentTime} />
+      <Time hours={currentHours} minutes={currentMinutes} />
     </div>
   );
 }

@@ -1,9 +1,10 @@
 import './HighlightGoal.css';
 
-function HighlightGoal() {
+function HighlightGoal({ highlightGoalText }) {
   return (
     <div className="highlight">
-      <p>highlight</p>
+      <h2>Hackathon Highlight Goal</h2>
+      <p>"{highlightGoalText}"</p>
     </div>
   );
 }

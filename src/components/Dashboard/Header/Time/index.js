@@ -1,9 +1,13 @@
 import './Time.css';
 
-function Time({ time }) {
+function Time({ hours, minutes }) {
   return (
     <div className="time">
-      <p>{time}</p>
+      <p>
+        {hours}
+        <span className="blink">:</span>
+        {minutes}
+      </p>
     </div>
   );
 }

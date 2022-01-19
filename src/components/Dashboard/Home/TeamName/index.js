@@ -1,9 +1,9 @@
 import './TeamName.css';
 
-function TeamName() {
+function TeamName({ teamNameText }) {
   return (
     <div className="team-name">
-      <p>team name</p>
+      <h2>{teamNameText}'s Dashboard</h2>
     </div>
   );
 }
