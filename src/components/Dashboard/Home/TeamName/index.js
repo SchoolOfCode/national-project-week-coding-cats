@@ -1,5 +1,11 @@
+import './TeamName.css';
+
 function TeamName() {
-  return <p>team name</p>;
+  return (
+    <div className="team-name">
+      <p>team name</p>
+    </div>
+  );
 }
 
 export default TeamName;

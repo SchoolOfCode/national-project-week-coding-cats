@@ -1,5 +1,11 @@
+import './KeyObjectives.css';
+
 function KeyObjectives() {
-  return <p>key objectives</p>;
+  return (
+    <div className="key-objectives">
+      <p>key objectives</p>
+    </div>
+  );
 }
 
 export default KeyObjectives;

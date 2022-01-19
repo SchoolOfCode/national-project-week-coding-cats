@@ -1,5 +1,11 @@
+import './HighlightGoal.css';
+
 function HighlightGoal() {
-  return <p>highlight</p>;
+  return (
+    <div className="highlight">
+      <p>highlight</p>
+    </div>
+  );
 }
 
 export default HighlightGoal;

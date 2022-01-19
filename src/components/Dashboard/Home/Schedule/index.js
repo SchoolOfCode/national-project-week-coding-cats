@@ -1,5 +1,11 @@
+import './Schedule.css';
+
 function Schedule() {
-  return <p>schedule</p>;
+  return (
+    <div className="schedule">
+      <p>schedule</p>
+    </div>
+  );
 }
 
 export default Schedule;
