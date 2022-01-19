@@ -1,0 +1,11 @@
+.key-objectives {
+  grid-row-start: 3;
+  grid-row-end: 5;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  padding: 10px;
+}
+
+.key-objectives::before {
+  list-style-type: disc;
+}
