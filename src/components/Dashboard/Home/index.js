@@ -15,7 +15,11 @@ function Home() {
         timeThree="Deploy awesome app"
         timeFour="Prep for presentations"
       />
-      <KeyObjectives />
+      <KeyObjectives
+        objectiveOne="Try some GitHub Branching"
+        objectiveTwo="Implement async/await function to call api"
+        objectiveThree="Create an awesome colour scheme that's never been seen before!"
+      />
     </div>
   );
 }
