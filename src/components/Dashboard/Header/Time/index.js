@@ -1,3 +1,5 @@
+import './Time.css';
+
 function Time({ time }) {
   return (
     <div className="time">
