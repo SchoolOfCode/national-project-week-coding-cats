@@ -1,3 +1,4 @@
+import './Header.css';
 import AppName from './AppName';
 import Time from './Time';
 

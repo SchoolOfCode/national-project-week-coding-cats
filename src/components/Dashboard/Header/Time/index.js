@@ -1,5 +1,9 @@
 function Time({ time }) {
-  return <p>{time}</p>;
+  return (
+    <div className="time">
+      <p>{time}</p>
+    </div>
+  );
 }
 
 export default Time;

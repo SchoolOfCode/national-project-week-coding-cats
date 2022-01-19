@@ -1,3 +1,4 @@
+import './Dashboard.css';
 import Header from './Header';
 import Home from './Home';
 import SideBar from './Sidebar';

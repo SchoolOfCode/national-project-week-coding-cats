@@ -1,3 +1,4 @@
+import './Home.css';
 import HighlightGoal from './HighlightGoal';
 import KeyObjectives from './KeyObjectives';
 import Schedule from './Schedule';

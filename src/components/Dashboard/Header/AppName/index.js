@@ -1,5 +1,10 @@
+import './AppName.css';
 function AppName() {
-  return <h1>Hackaplanner</h1>;
+  return (
+    <div className="app-name">
+      <h1>Hackaplanner</h1>
+    </div>
+  );
 }
 
 export default AppName;
