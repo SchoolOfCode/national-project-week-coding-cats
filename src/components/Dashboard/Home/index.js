@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import './Home.css';
 import HighlightGoal from './HighlightGoal';
 import KeyObjectives from './KeyObjectives';
@@ -5,20 +6,33 @@ import Schedule from './Schedule';
 import TeamName from './TeamName';
 
 function Home() {
+  const [data, setData] = useState([]); //init data state
+
+  useEffect(() => {
+    async function getData() {
+      const response = await fetch('https://hackaplanner.herokuapp.com/users');
+      const json = await response.json();
+      //set data state
+      setData(json.payload[0]);
+    }
+    //get data state from our API
+    getData();
+  }, []);
+
   return (
     <div className="home">
-      <TeamName teamNameText="Coding Cats" />
-      <HighlightGoal highlightGoalText="Teamwork makes the dream work! Let’s get this API function sorted!" />
+      <TeamName teamNameText={data.team_name} />
+      <HighlightGoal highlightGoalText={data.highlight_goal} />
       <Schedule
-        timeOne={'Do the thing that does the thing'}
-        timeTwo="By now we should be implementing a neat feature"
-        timeThree="Deploy awesome app"
-        timeFour="Prep for presentations"
+        timeOne={data.time_one}
+        timeTwo={data.time_two}
+        timeThree={data.time_three}
+        timeFour={data.time_four}
       />
       <KeyObjectives
-        objectiveOne="Try some GitHub Branching"
-        objectiveTwo="Implement async/await function to call api"
-        objectiveThree="Create an awesome colour scheme that's never been seen before!"
+        objectiveOne={data.key_objective_one}
+        objectiveTwo={data.key_objective_two}
+        objectiveThree={data.key_objective_three}
       />
     </div>
   );
