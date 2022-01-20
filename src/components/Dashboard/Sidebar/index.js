@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import './Sidebar.css';
 import homeLogo from './home.svg';
 import resourcesLogo from './resources.svg';
@@ -7,13 +7,13 @@ function SideBar() {
   return (
     <div className="sidebar">
       <div className="sidebar-nav">
-        <Link to="/">
-          <div className="sidebar-nav-btn sidebar-nav-btn--active">
+        <NavLink exact activeClassName="active" to="/">
+          <div className="sidebar-nav-btn">
             <img src={homeLogo} className="home-logo" alt="home-logo" />
             <p>Home</p>
           </div>
-        </Link>
-        <Link to="/resources">
+        </NavLink>
+        <NavLink exact activeClassName="active" to="/resources">
           <div className="sidebar-nav-btn">
             <img
               src={resourcesLogo}
@@ -22,7 +22,7 @@ function SideBar() {
             />
             <p>Resources</p>
           </div>
-        </Link>
+        </NavLink>
       </div>
       <h2>TEAM:</h2>
       <ul>

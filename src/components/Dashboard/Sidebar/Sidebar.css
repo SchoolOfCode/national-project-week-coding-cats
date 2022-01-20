@@ -10,6 +10,11 @@
   flex-direction: column;
 }
 
+.sidebar-nav a {
+  color: inherit;
+  text-decoration: none;
+}
+
 .sidebar-nav-btn {
   display: flex;
   justify-content: flex-start;
@@ -21,7 +26,8 @@
   font-size: 1.5rem;
 }
 
-.sidebar-nav-btn--active {
+.active {
+  font-weight: bold;
   background-color: var(--background-color);
 }
 
