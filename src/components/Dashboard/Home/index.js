@@ -6,39 +6,33 @@ import Schedule from './Schedule';
 import TeamName from './TeamName';
 
 function Home() {
-  // const [teamName, setTeamName] = useState('');
+  const [data, setData] = useState([]); //init data state
 
-  // useEffect(() => {
-  //   async function getTeamName() {
-  //     const response = await fetch('https://hackaplanner.herokuapp.com/users');
-  //     const data = await response.json();
-  //     setTeamName(data.payload[0].team_name);
-  //   }
-
-  //   getTeamName();
-  // }, []);
-
-  //Plan for tomorrow:
-  // Create a state that holds the API fetch request. The default state will be an array.
-  // Create a useEffect to run on the first load of the page
-  // Inside will have an fetch request to https://hackaplanner.herokuapp.com/users
-  // Store the response into the state
-  // Accessing the state for each of the props below
+  useEffect(() => {
+    async function getData() {
+      const response = await fetch('https://hackaplanner.herokuapp.com/users');
+      const json = await response.json();
+      //set data state
+      setData(json.payload[0]);
+    }
+    //get data state from our API
+    getData();
+  }, []);
 
   return (
     <div className="home">
-      <TeamName teamNameText="Mad Max" />
-      <HighlightGoal highlightGoalText="Teamwork makes the dream work! Let’s get this API function sorted!" />
+      <TeamName teamNameText={data.team_name} />
+      <HighlightGoal highlightGoalText={data.highlight_goal} />
       <Schedule
-        timeOne={'Do the thing that does the thing'}
-        timeTwo="By now we should be implementing a neat feature"
-        timeThree="Deploy awesome app"
-        timeFour="Prep for presentations"
+        timeOne={data.time_one}
+        timeTwo={data.time_two}
+        timeThree={data.time_three}
+        timeFour={data.time_four}
       />
       <KeyObjectives
-        objectiveOne="Try some GitHub Branching"
-        objectiveTwo="Implement async/await function to call api"
-        objectiveThree="Create an awesome colour scheme that's never been seen before!"
+        objectiveOne={data.key_objective_one}
+        objectiveTwo={data.key_objective_two}
+        objectiveThree={data.key_objective_three}
       />
     </div>
   );
