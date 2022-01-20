@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-function Form() {
+function Form({makeModalHidden}) {
   const [inputs, setInputs] = useState({});
 
   const handleChange = (event) => {
@@ -12,7 +12,18 @@ function Form() {
   const handleSubmit = (event) => {
     event.preventDefault();
     console.log(inputs);
+    postForm(inputs);
   };
+
+  //POST plan info into our database
+  async function postForm(data) {
+    const url = 'https://hackaplanner.herokuapp.com/users';
+    await fetch(url, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data),
+    });
+  }
 
   return (
     <form onSubmit={handleSubmit}>
@@ -97,7 +108,7 @@ function Form() {
           onChange={handleChange}
         />
       </label>
-      <input type="submit" />
+      <input type="submit" onClick={()=>makeModalHidden()}/>
     </form>
   );
 }

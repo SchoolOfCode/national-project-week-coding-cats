@@ -5,10 +5,10 @@ function SetupModal({ isVisible, makeModalHidden }) {
   return (
     <div id="myModal" className="modal" style={{ display: isVisible }}>
       <div class="modal-content" style={{ display: isVisible }}>
-        <span onClick={makeModalHidden} class="close">
+        <span onClick={() => makeModalHidden()} class="close">
           &times;
         </span>
-        <Form />
+        <Form makeModalHidden={makeModalHidden} />
       </div>
     </div>
   );
