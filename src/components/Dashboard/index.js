@@ -1,3 +1,4 @@
+import { Routes, Route } from 'react-router-dom';
 import './Dashboard.css';
 import Header from './Header';
 import Home from './Home';
@@ -9,8 +10,10 @@ function Dashboard() {
     <div className="dashboard">
       <Header />
       <SideBar />
-      <Home />
-      <Resources />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/resources" element={<Resources />}/>
+      </Routes>
     </div>
   );
 }
