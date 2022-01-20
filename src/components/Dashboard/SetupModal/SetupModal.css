@@ -18,7 +18,8 @@
   padding: 20px;
   border: 1px solid #888;
   width: 80%;
-  height: 600px;
+  height: 670px;
+  overflow: auto;
   border-radius: 5px;
 }
 
@@ -93,12 +94,17 @@
   font-size: 13px;
   text-align: center;
   padding-bottom: 20px;
-  margin-top: 1px;
+}
+
+.modal-section {
+  font-size: 13px;
+  text-align: center;
+  padding-top: 20px;
 }
 
 .modal-question {
   font-size: 13px;
   text-align: center;
   padding-bottom: 7px;
-  padding-top: 10px;
+  padding-top: 20px;
 }

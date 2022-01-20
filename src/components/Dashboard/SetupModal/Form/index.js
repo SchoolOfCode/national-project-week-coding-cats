@@ -38,7 +38,7 @@ function Form({ submitForm, getData }) {
         <i>Welcome! We’ll ask you a few questions to get your plan setup.</i>
       </p>
       <label>
-        Enter Team Name:
+        What's your team name?
         <input
           placeholder="For Example: 'Kanban Friends'"
           className="team-name"
@@ -49,7 +49,7 @@ function Form({ submitForm, getData }) {
         />
       </label>
       <label>
-        Highlight Goal:
+        What would you like to achieve, as a team, during this hackathon?
         <input
           placeholder="For example: ‘We would like to make sure that all of us get to code for a bit’"
           className="highlight-goal"
@@ -59,6 +59,10 @@ function Form({ submitForm, getData }) {
           onChange={handleChange}
         />
       </label>
+      <p className="modal-section">
+        <i>What are your team's three key objectives?</i>
+      </p>
+
       <label>
         Key Objective One:
         <input
@@ -92,7 +96,7 @@ function Form({ submitForm, getData }) {
           onChange={handleChange}
         />
       </label>
-      <p className="modal-question">
+      <p className="modal-question modal-section">
         <i>
           What are you hoping to be working on at these points in time today?
         </i>
