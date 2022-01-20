@@ -41,7 +41,7 @@ function Form({ submitForm, getData }) {
         What's your team name?
         <input
           placeholder="For Example: 'Kanban Friends'"
-          className="team-name"
+          className="team-name-question"
           type="text"
           name="team_name"
           value={inputs.team_name || ''}
