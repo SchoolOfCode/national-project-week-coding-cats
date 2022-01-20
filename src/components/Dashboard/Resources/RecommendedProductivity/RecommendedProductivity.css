@@ -1,0 +1,7 @@
+.recommended-productivity {
+  line-height: 2rem;
+}
+
+.recommended-productivity a {
+  color: var(--highlight-color);
+}
