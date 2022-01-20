@@ -13,3 +13,7 @@
   background-color: var(--card-color);
   color: var(--text-main-color);
 }
+
+.card-center {
+  text-align: center;
+}
