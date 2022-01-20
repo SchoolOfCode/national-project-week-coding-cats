@@ -12,16 +12,20 @@
 
 /* Modal Content */
 .modal-content {
-  background-color: #fefefe;
+  background-color: var(--card-color);
+  color: var(--text-main-color);
   margin: auto;
   padding: 20px;
   border: 1px solid #888;
   width: 80%;
+  height: 670px;
+  overflow: auto;
+  border-radius: 5px;
 }
 
 /* The Close Button */
 .close {
-  color: #aaaaaa;
+  color: var(--text-main-color);
   float: right;
   font-size: 28px;
   font-weight: bold;
@@ -29,7 +33,78 @@
 
 .close:hover,
 .close:focus {
-  color: #000;
+  color: var(--highlight-color);
   text-decoration: none;
   cursor: pointer;
+}
+
+.submit-button {
+  background-color: var(--button-color);
+  border-radius: 2px;
+  border: none;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background-color: var(--button-hover-color);
+  border-radius: 2px;
+  border: none;
+}
+
+.team-name,
+.highlight-goal,
+.objective-one,
+.objective-two,
+.objective-three,
+.time-one,
+.time-two,
+.time-three,
+.time-four {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--text-main-color);
+  display: block;
+  width: 100%;
+  margin-top: 5px;
+  margin-bottom: 13px;
+  color: var(--text-main-color);
+  font-style: italic;
+}
+
+.team-name:focus,
+.highlight-goal:focus,
+.objective-one:focus,
+.objective-two:focus,
+.objective-three:focus,
+.time-one:focus,
+.time-two:focus,
+.time-three:focus,
+.time-four:focus {
+  outline: none;
+  border-bottom: 1px solid var(--button-hover-color);
+  color: var(--text-main-color);
+  font-style: normal;
+}
+
+.modal-welcome {
+  font-size: 13px;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.modal-section {
+  font-size: 13px;
+  text-align: center;
+  padding-top: 20px;
+}
+
+.modal-question {
+  font-size: 13px;
+  text-align: center;
+  padding-bottom: 7px;
+  padding-top: 20px;
 }

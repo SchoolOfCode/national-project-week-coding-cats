@@ -34,9 +34,14 @@ function Form({ submitForm, getData }) {
   // JSX Form
   return (
     <form onSubmit={handleSubmit}>
+      <p className="modal-welcome">
+        <i>Welcome! We’ll ask you a few questions to get your plan setup.</i>
+      </p>
       <label>
-        Enter Team Name:
+        What's your team name?
         <input
+          placeholder="For Example: 'Kanban Friends'"
+          className="team-name"
           type="text"
           name="team_name"
           value={inputs.team_name || ''}
@@ -44,17 +49,25 @@ function Form({ submitForm, getData }) {
         />
       </label>
       <label>
-        Highlight Goal:
+        What would you like to achieve, as a team, during this hackathon?
         <input
+          placeholder="For example: ‘We would like to make sure that all of us get to code for a bit’"
+          className="highlight-goal"
           type="text"
           name="highlight_goal"
           value={inputs.highlight_goal || ''}
           onChange={handleChange}
         />
       </label>
+      <p className="modal-section">
+        <i>What are your team's three key objectives?</i>
+      </p>
+
       <label>
         Key Objective One:
         <input
+          placeholder="Please fill in the first objective."
+          className="objective-one"
           type="text"
           name="key_objective_one"
           value={inputs.key_objective_one || ''}
@@ -64,6 +77,8 @@ function Form({ submitForm, getData }) {
       <label>
         Key Objective Two:
         <input
+          placeholder="Please fill in the second objective."
+          className="objective-two"
           type="text"
           name="key_objective_two"
           value={inputs.key_objective_two || ''}
@@ -73,15 +88,23 @@ function Form({ submitForm, getData }) {
       <label>
         Key Objective Three:
         <input
+          placeholder="Please fill in the third objective."
+          className="objective-three"
           type="text"
           name="key_objective_three"
           value={inputs.key_objective_three || ''}
           onChange={handleChange}
         />
       </label>
+      <p className="modal-question modal-section">
+        <i>
+          What are you hoping to be working on at these points in time today?
+        </i>
+      </p>
       <label>
-        Time One:
+        09:30:
         <input
+          className="time-one"
           type="text"
           name="time_one"
           value={inputs.time_one || ''}
@@ -89,8 +112,9 @@ function Form({ submitForm, getData }) {
         />
       </label>
       <label>
-        Time Two:
+        10:30:
         <input
+          className="time-two"
           type="text"
           name="time_two"
           value={inputs.time_two || ''}
@@ -98,8 +122,9 @@ function Form({ submitForm, getData }) {
         />
       </label>
       <label>
-        Time Three:
+        14:30:
         <input
+          className="time-three"
           type="text"
           name="time_three"
           value={inputs.time_three || ''}
@@ -107,8 +132,9 @@ function Form({ submitForm, getData }) {
         />
       </label>
       <label>
-        Time Four:
+        15:30:
         <input
+          className="time-four"
           type="text"
           name="time_four"
           value={inputs.time_four || ''}
@@ -116,6 +142,7 @@ function Form({ submitForm, getData }) {
         />
       </label>
       <input
+        className="submit-button"
         type="submit"
         onClick={() => {
           submitForm();
