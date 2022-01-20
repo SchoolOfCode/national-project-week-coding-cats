@@ -1,23 +1,15 @@
-import { useState, useEffect } from 'react';
 import './Home.css';
-import HighlightGoal from './HighlightGoal';
-import KeyObjectives from './KeyObjectives';
-import Schedule from './Schedule';
+import { useEffect } from 'react';
 import TeamName from './TeamName';
+import HighlightGoal from './HighlightGoal';
+import Schedule from './Schedule';
+import KeyObjectives from './KeyObjectives';
 
-function Home() {
-  const [data, setData] = useState([]); //init data state
-
+function Home({ getData, data }) {
   useEffect(() => {
-    async function getData() {
-      const response = await fetch('https://hackaplanner.herokuapp.com/users');
-      const json = await response.json();
-      //set data state
-      setData(json.payload[0]);
-    }
-    //get data state from our API
+    // Calls getData() function on first render of the page, and then for whenever the data state changes
     getData();
-  }, []);
+  }, [data]);
 
   return (
     <div className="home">
