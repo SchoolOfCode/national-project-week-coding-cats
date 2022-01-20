@@ -2,7 +2,7 @@ import './KeyObjectives.css';
 
 function KeyObjectives({ objectiveOne, objectiveTwo, objectiveThree }) {
   return (
-    <div className="key-objectives card">
+    <div className="key-objectives card card-4">
       <h2>Key objectives</h2>
 
       <p>
