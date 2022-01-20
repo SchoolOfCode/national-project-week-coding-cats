@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-function Form({makeModalHidden}) {
+function Form({ submitForm, getData }) {
   const [inputs, setInputs] = useState({});
 
   const handleChange = (event) => {
@@ -108,12 +108,20 @@ function Form({makeModalHidden}) {
           onChange={handleChange}
         />
       </label>
-      <input type="submit" onClick={()=>makeModalHidden()}/>
+      <input
+        type="submit"
+        onClick={() => {
+          submitForm();
+          getData();
+        }}
+      />
     </form>
   );
 }
 
 export default Form;
+
+// onClick={() => { func1(); func2();}}
 
 /* {
     "team_name": "coding cats",

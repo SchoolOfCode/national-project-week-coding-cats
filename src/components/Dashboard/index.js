@@ -13,6 +13,16 @@ import { useEffect, useState } from 'react';
 function Dashboard() {
   const [visibility, setVisibility] = useState('none');
 
+  //Initial data state
+  const [data, setData] = useState([]);
+
+  async function getData() {
+    const response = await fetch('https://hackaplanner.herokuapp.com/users');
+    const json = await response.json();
+    //set data state
+    setData(json.payload[0]);
+  }
+
   function makeModalVisible() {
     setVisibility('block');
   }
@@ -20,6 +30,7 @@ function Dashboard() {
   function makeModalHidden() {
     setVisibility('none');
   }
+
   useEffect(() => {
     makeModalVisible();
   }, []);
@@ -30,11 +41,12 @@ function Dashboard() {
         isVisible={visibility}
         makeModalVisible={makeModalVisible}
         makeModalHidden={makeModalHidden}
+        getData={getData}
       />
       <Header />
       <SideBar />
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Home getData={getData} data={data} />} />
         <Route path="/resources" element={<Resources />} />
       </Routes>
     </div>
