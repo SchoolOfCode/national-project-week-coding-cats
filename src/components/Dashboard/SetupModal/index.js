@@ -1,6 +1,6 @@
 import './SetupModal.css';
 
-function SetupModal({ isVisible, makeModalHidden, makeModalVisible, zIndex }) {
+function SetupModal({ isVisible, makeModalHidden, makeModalVisible }) {
   return (
     <div id="myModal" className="modal " style={{ display: isVisible }}>
       <div class="modal-content" style={{ display: isVisible }}>

@@ -12,16 +12,13 @@ import { useEffect, useState } from 'react';
 //one that updates the state to hidden
 function Dashboard() {
   const [visibility, setVisibility] = useState('none');
-  const [zIndex, setZIndex] = useState('');
 
   function makeModalVisible() {
     setVisibility('block');
-    setZIndex('999');
   }
 
   function makeModalHidden() {
     setVisibility('none');
-    setZIndex('-999');
   }
   useEffect(() => {
     makeModalVisible();
@@ -32,7 +29,6 @@ function Dashboard() {
       <SetupModal
         isVisible={visibility}
         makeModalVisible={makeModalVisible}
-        zIndex={zIndex}
         makeModalHidden={makeModalHidden}
       />
       <Header />
