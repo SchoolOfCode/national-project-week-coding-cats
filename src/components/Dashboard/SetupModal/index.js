@@ -2,6 +2,7 @@ import './SetupModal.css';
 import Form from './Form';
 
 function SetupModal({ isVisible, makeModalHidden, getData }) {
+  // Function for hiding Modal when form is submitted
   function submitForm() {
     makeModalHidden();
   }

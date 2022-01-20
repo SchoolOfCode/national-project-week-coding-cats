@@ -1,21 +1,27 @@
 import { useState } from 'react';
 
 function Form({ submitForm, getData }) {
+  // State which contains all of the inputs from the form.
+  // The default value of the state is an empty object.
+  // The state expects the inputs to be returned as an object.
   const [inputs, setInputs] = useState({});
 
+  // Hadnles form submission, compiles each input from the form into an object.
   const handleChange = (event) => {
     const name = event.target.name;
     const value = event.target.value;
     setInputs((values) => ({ ...values, [name]: value }));
   };
 
+  // Function for preventing page refresh, and
+  // updates the inputs state with the information gathered from
+  // the from.
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log(inputs);
     postForm(inputs);
   };
 
-  //POST plan info into our database
+  // ASYNC Function for posting the inputs state into the database API.
   async function postForm(data) {
     const url = 'https://hackaplanner.herokuapp.com/users';
     await fetch(url, {
@@ -25,6 +31,7 @@ function Form({ submitForm, getData }) {
     });
   }
 
+  // JSX Form
   return (
     <form onSubmit={handleSubmit}>
       <label>
@@ -120,18 +127,3 @@ function Form({ submitForm, getData }) {
 }
 
 export default Form;
-
-// onClick={() => { func1(); func2();}}
-
-/* {
-    "team_name": "coding cats",
-    "highlight_goal": "team work makes the dram work!Lets get this API sorted",
-    "key_objective_one": "Try some GITHUB branching",
-    "key_objective_two": " function to call api",
-    "key_objective_three": "to make this happen",
-    "time_one": "Do the thing that does the thing",
-    "time_two": "By now we should be implementing a neat feature",
-    "time_three": "Deploy an awesome App!",
-    "time_four": "relax"
-    }
-*/

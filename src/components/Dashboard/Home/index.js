@@ -1,13 +1,13 @@
-import { useEffect } from 'react';
 import './Home.css';
-import HighlightGoal from './HighlightGoal';
-import KeyObjectives from './KeyObjectives';
-import Schedule from './Schedule';
+import { useEffect } from 'react';
 import TeamName from './TeamName';
+import HighlightGoal from './HighlightGoal';
+import Schedule from './Schedule';
+import KeyObjectives from './KeyObjectives';
 
 function Home({ getData, data }) {
   useEffect(() => {
-    //get data state from our API
+    // Calls getData() function on first render of the page, and then for whenever the data state changes
     getData();
   }, [data]);
 
