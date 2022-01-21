@@ -24,11 +24,15 @@ function SideBar() {
           </div>
         </NavLink>
       </div>
-      <h2>TEAM:</h2>
-      <ul>
-        <li>ashlie</li>
-        <li>tom</li>
-      </ul>
+      <div className="team">
+        <h2>Team</h2>
+        <ul>
+          <li>Ashlie</li>
+          <li>Tom</li>
+          <li>Eni</li>
+          <li>Max</li>
+        </ul>
+      </div>
     </div>
   );
 }

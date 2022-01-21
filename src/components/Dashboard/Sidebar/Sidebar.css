@@ -1,4 +1,7 @@
 .sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   background-color: var(--sidebar-color);
   color: var(--text-main-color);
   grid-row: 2;
@@ -39,4 +42,26 @@
 .resources-logo {
   width: 20%;
   height: auto;
+}
+
+.team h2 {
+  text-align: center;
+}
+
+.team ul {
+  margin: 0;
+  padding-left: 0;
+}
+
+.team ul li {
+  padding: 15px;
+  list-style: none;
+}
+
+.team ul li:nth-child(odd) {
+  background-color: #131313;
+}
+
+.team ul li:nth-child(even) {
+  background-color: #1a1a1a;
 }
