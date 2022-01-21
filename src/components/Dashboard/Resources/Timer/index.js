@@ -73,7 +73,7 @@ const Timer = () => {
   };
 
   return (
-    <div className="timer-controller-wrapper">
+    <div className="timer-controller-wrapper card card-2">
       <div className="timer-display">{renderedStreamDuration}</div>
       <div className="buttons-wrapper">
         <button
