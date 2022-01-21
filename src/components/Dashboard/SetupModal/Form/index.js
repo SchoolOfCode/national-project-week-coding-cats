@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-function Form({ submitForm, getData }) {
+function Form({ submitForm, setData }) {
   // State which contains all of the inputs from the form.
   // The default value of the state is an empty object.
   // The state expects the inputs to be returned as an object.
@@ -19,6 +19,7 @@ function Form({ submitForm, getData }) {
   const handleSubmit = (event) => {
     event.preventDefault();
     postForm(inputs);
+    setData(inputs);
   };
 
   // ASYNC Function for posting the inputs state into the database API.
@@ -146,7 +147,6 @@ function Form({ submitForm, getData }) {
         type="submit"
         onClick={() => {
           submitForm();
-          getData();
         }}
       />
     </form>
