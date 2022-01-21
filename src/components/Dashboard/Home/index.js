@@ -1,26 +1,10 @@
 import './Home.css';
-import { useEffect, useState } from 'react';
 import TeamName from './TeamName';
 import HighlightGoal from './HighlightGoal';
 import Schedule from './Schedule';
 import KeyObjectives from './KeyObjectives';
 
-function Home() {
-
-  //Initial Data state from the API fetch. Default value is empty array.
-  const [data, setData] = useState([]);
-
-  useEffect(() => {
-    // Calls getData() function on first render of the page, and then for whenever the data state changes
-    // Function for fetching all data from API
-    async function fetchAPI() {
-      const response = await fetch('https://hackaplanner.herokuapp.com/users');
-      const json = await response.json();
-      // Set data state
-      setData(json.payload[0]);
-    }
-    fetchAPI();
-  }, []);
+function Home({data}) {
 
   return (
     <div className="home">

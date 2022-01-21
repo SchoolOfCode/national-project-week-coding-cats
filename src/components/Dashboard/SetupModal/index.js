@@ -1,7 +1,7 @@
 import './SetupModal.css';
 import Form from './Form';
 
-function SetupModal({ isVisible, makeModalHidden, getData }) {
+function SetupModal({ isVisible, makeModalHidden, setData }) {
   // Function for hiding Modal when form is submitted
   function submitForm() {
     makeModalHidden();
@@ -13,7 +13,7 @@ function SetupModal({ isVisible, makeModalHidden, getData }) {
         <span onClick={() => makeModalHidden()} class="close">
           &times;
         </span>
-        <Form submitForm={submitForm} getData={getData} />
+        <Form submitForm={submitForm} setData={setData} />
       </div>
     </div>
   );

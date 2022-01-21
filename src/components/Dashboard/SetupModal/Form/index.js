@@ -20,6 +20,7 @@ function Form({ submitForm, setData }) {
     event.preventDefault();
     postForm(inputs);
     setData(inputs);
+    console.log(inputs)
   };
 
   // ASYNC Function for posting the inputs state into the database API.
