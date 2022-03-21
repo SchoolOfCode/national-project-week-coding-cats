@@ -1,70 +1,45 @@
-# Getting Started with Create React App
+# 📅 Hackaplanner (Frontend) — a School of Code week project ✏
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**Made with ♥ by the Coding Cats**
 
-## Available Scripts
+About the App
+---
+Every Friday, the School of Code bootcampers participate on a day-long hackathon where they implement their newly acquired web developing knowledge. Because they must build something from scratch in such a short period of time, it can easily get chaotic without a proper plan. Hackaplanner facilitates planning by asking the user some questions and sets up tasks and goals to track during the day.
 
-In the project directory, you can run:
+### How to run locally
+- In the project directory, run:
+  - `npm install` to install dependencies
+  - `npm start` to run the app in the development mode
+  - Open [http://localhost:3000](http://localhost:3000) to view the app in a browser.
+- You can also view the [live demo here](https://hackaplanner.netlify.app/).
 
-### `npm start`
+### Technologies used
+#### > FRONTEND
+- HTML5
+- CSS3
+- JavaScript (ES6)
+- React.js
+- [Create React App](https://github.com/facebook/create-react-app)
+- Netlify (PaaS to deploy website)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+#### > BACKEND
+- JavaScript (ES6)
+- Node.js
+- Express.js
+- PostgreSQL
+- Postman (route testing)
+- Heroku (PaaS to deploy database)
+</br>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+About the School of Code
+---
+The [School of Code](https://www.schoolofcode.co.uk/) is a free coding bootcamp where people from all sorts of different backgrounds can learn industry standard tools to become full stack developer at the end of the intensive course. It is an amazing community where bootcampers are supported for the duration of the course and even once it's done. You don't need to have written a single line of code before you've joined but by the end you will be building full stack applications using agile methodologies. This project is one of the two full stack applications bootcampers build within a team of new people.
 
-### `npm test`
+### The Coding Cats
+We didn't know each other before the start of this project, but we managed to become a great team in just a week and we're proud of that. We ideated, designed and built this app in less than a week. We chose the team name somewhat randomly, but it's catchy so it works!
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Team members:
+- [Tom || @tmserl](https://github.com/tmserl)
+- [Ashlie || @ashliecodes](https://github.com/ashliecodes)
+- [Max || @mmuller2](https://github.com/mmuller2)
+- [Enia || @eniabellver](https://github.com/eniabellver)
